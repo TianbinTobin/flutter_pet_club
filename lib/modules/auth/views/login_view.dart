@@ -1,10 +1,13 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:pet_club/utils/logger.dart';
 import 'package:pet_club/gen/assets.gen.dart';
+import 'package:pet_club/routes/app_pages.dart';
 import 'package:pet_club/common/constants/colors.dart';
 import 'package:pet_club/modules/auth/widgets/login_input_field.dart';
 import 'package:pet_club/modules/auth/widgets/login_filled_button.dart';
 import 'package:pet_club/modules/auth/controllers/auth_controller.dart';
+
 
 class LoginView extends GetView<AuthController> {
   const LoginView({super.key});
@@ -54,7 +57,9 @@ class LoginView extends GetView<AuthController> {
                   ),
                 ),
                 SizedBox(height: 32.0),
-                LoginFilledButton(text: 'Login', onPressed: () {}),
+                LoginFilledButton(text: 'Login', onPressed: () {
+                  Get.offNamed(AppRoutes.CART);
+                }),
                 SizedBox(height: 24.0),
                 Text(
                   'or connect with',
@@ -70,7 +75,9 @@ class LoginView extends GetView<AuthController> {
                   text: 'Login With WeChat',
                   fontSize: 20.0,
                   icon: Assets.images.icons.wechat.svg(width: 24, height: 24),
-                  onPressed: () {},
+                  onPressed: () {
+                    logger.d(controller.loginPasswordController.text);
+                  },
                 ),
               ],
             ),

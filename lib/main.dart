@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
+import 'package:pet_club/utils/logger.dart';
 import 'package:pet_club/gen/fonts.gen.dart';
 import 'package:pet_club/routes/routes.dart';
 import 'package:pet_club/common/constants/colors.dart';
@@ -24,6 +25,7 @@ class PetClubApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    logger.d('build GetMaterialApp');
     return GetMaterialApp(
       enableLog: true,
       getPages: AppPages.routes,

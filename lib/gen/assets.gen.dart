@@ -40,17 +40,24 @@ class $AssetsImagesCommonGen {
 class $AssetsImagesIconsGen {
   const $AssetsImagesIconsGen();
 
+  /// File path: assets/images/icons/arrow-left.svg
+  SvgGenImage get arrowLeft =>
+      const SvgGenImage('assets/images/icons/arrow-left.svg');
+
   /// File path: assets/images/icons/lock.svg
   SvgGenImage get lock => const SvgGenImage('assets/images/icons/lock.svg');
 
   /// File path: assets/images/icons/mail.svg
   SvgGenImage get mail => const SvgGenImage('assets/images/icons/mail.svg');
 
+  /// File path: assets/images/icons/shop.svg
+  SvgGenImage get shop => const SvgGenImage('assets/images/icons/shop.svg');
+
   /// File path: assets/images/icons/wechat.svg
   SvgGenImage get wechat => const SvgGenImage('assets/images/icons/wechat.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [lock, mail, wechat];
+  List<SvgGenImage> get values => [arrowLeft, lock, mail, shop, wechat];
 }
 
 class Assets {

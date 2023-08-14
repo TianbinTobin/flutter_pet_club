@@ -9,7 +9,7 @@ class SplashController extends GetxController {
   void onReady() async {
     super.onReady();
     await _initFunction();
-    await Get.offNamed(Routes.LOGIN);
+    await Get.offNamed(AppRoutes.LOGIN);
   }
 
   Future<void> _initFunction() async {

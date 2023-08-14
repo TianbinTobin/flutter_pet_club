@@ -1,22 +1,28 @@
 import 'package:get/get.dart';
 import 'package:pet_club/modules/auth/auth.dart';
+import 'package:pet_club/modules/cart/cart.dart';
 import 'package:pet_club/modules/splash/splash.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
-  static const INITIAL = Routes.SPLASH;
+  static const INITIAL = AppRoutes.SPLASH;
 
   static final routes = [
     GetPage(
-      name: Routes.SPLASH,
+      name: AppRoutes.SPLASH,
       page: () => SplashView(),
       binding: SplashBinding(),
     ),
     GetPage(
-      name: Routes.LOGIN,
+      name: AppRoutes.LOGIN,
       page: () => LoginView(),
       binding: AuthBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.CART,
+      page: () => CartView(),
+      binding: CartBinding(),
     ),
   ];
 }
