@@ -1,29 +1,25 @@
 import 'package:get/get.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 import 'package:pet_club/gen/fonts.gen.dart';
 import 'package:pet_club/routes/routes.dart';
 import 'package:pet_club/common/constants/colors.dart';
+import 'package:pet_club/common/services/setting_service.dart';
 
-void main() {
+void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-  SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle.dark.copyWith(
-        statusBarColor: Colors.transparent,
-        systemNavigationBarColor: Colors.transparent),
-  );
+  await SettingService.setSystemUIStyle();
 
-  runApp(const App());
+  runApp(const PetClubApp());
 
   FlutterNativeSplash.remove();
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class PetClubApp extends StatelessWidget {
+  const PetClubApp({super.key});
 
   // This widget is the root of your application.
   @override
