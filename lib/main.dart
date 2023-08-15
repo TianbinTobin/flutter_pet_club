@@ -6,13 +6,15 @@ import 'package:pet_club/utils/logger.dart';
 import 'package:pet_club/gen/fonts.gen.dart';
 import 'package:pet_club/routes/routes.dart';
 import 'package:pet_club/common/constants/colors.dart';
-import 'package:pet_club/common/services/setting_service.dart';
+import 'package:pet_club/common/services/services.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  await SettingService.setSystemUIStyle();
+  await SystemService.setSystemUIStyle();
+
+  await Get.putAsync<StorageService>(() => StorageService().init());
 
   runApp(const PetClubApp());
 

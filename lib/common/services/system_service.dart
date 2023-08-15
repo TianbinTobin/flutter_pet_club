@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class SettingService {
+class SystemService {
   /// 设置系统UI展示样式(全面屏)
   static Future<void> setSystemUIStyle() async {
     await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
