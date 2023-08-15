@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:pet_club/modules/auth/controllers/auth_controller.dart';
+import 'package:pet_club/modules/auth/auth_controller.dart';
 
 class AuthBinding extends Bindings {
   @override

@@ -6,7 +6,7 @@ import 'package:pet_club/routes/app_pages.dart';
 import 'package:pet_club/common/constants/colors.dart';
 import 'package:pet_club/modules/auth/widgets/login_input_field.dart';
 import 'package:pet_club/modules/auth/widgets/login_filled_button.dart';
-import 'package:pet_club/modules/auth/controllers/auth_controller.dart';
+import 'package:pet_club/modules/auth/auth_controller.dart';
 
 
 class LoginView extends GetView<AuthController> {

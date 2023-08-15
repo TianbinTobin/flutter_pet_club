@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_club/gen/assets.gen.dart';
 import 'package:pet_club/common/constants/colors.dart';
-import 'package:pet_club/modules/splash/controllers/splash_controller.dart';
+import 'package:pet_club/modules/splash/splash_controller.dart';
 
 class SplashView extends GetView<SplashController> {
   const SplashView({super.key});

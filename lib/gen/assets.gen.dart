@@ -50,6 +50,8 @@ class $AssetsImagesIconsGen {
   /// File path: assets/images/icons/mail.svg
   SvgGenImage get mail => const SvgGenImage('assets/images/icons/mail.svg');
 
+  $AssetsImagesIconsNavGen get nav => const $AssetsImagesIconsNavGen();
+
   /// File path: assets/images/icons/shop.svg
   SvgGenImage get shop => const SvgGenImage('assets/images/icons/shop.svg');
 
@@ -58,6 +60,32 @@ class $AssetsImagesIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [arrowLeft, lock, mail, shop, wechat];
+}
+
+class $AssetsImagesIconsNavGen {
+  const $AssetsImagesIconsNavGen();
+
+  /// File path: assets/images/icons/nav/discover.svg
+  SvgGenImage get discover =>
+      const SvgGenImage('assets/images/icons/nav/discover.svg');
+
+  /// File path: assets/images/icons/nav/explore.svg
+  SvgGenImage get explore =>
+      const SvgGenImage('assets/images/icons/nav/explore.svg');
+
+  /// File path: assets/images/icons/nav/home.svg
+  SvgGenImage get home => const SvgGenImage('assets/images/icons/nav/home.svg');
+
+  /// File path: assets/images/icons/nav/manage.svg
+  SvgGenImage get manage =>
+      const SvgGenImage('assets/images/icons/nav/manage.svg');
+
+  /// File path: assets/images/icons/nav/profile.svg
+  SvgGenImage get profile =>
+      const SvgGenImage('assets/images/icons/nav/profile.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [discover, explore, home, manage, profile];
 }
 
 class Assets {

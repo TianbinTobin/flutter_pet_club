@@ -40,6 +40,14 @@ class PetClubApp extends StatelessWidget {
           seedColor: ColorConstants.primary,
           primary: ColorConstants.primary,
         ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          type: BottomNavigationBarType.fixed,
+          selectedIconTheme: IconThemeData(size: 30.0),
+          unselectedIconTheme: IconThemeData(size: 30.0),
+          backgroundColor: ColorConstants.primary,
+          selectedItemColor: ColorConstants.white,
+          unselectedItemColor: ColorConstants.white,
+        ),
         useMaterial3: true,
       ),
     );

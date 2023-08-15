@@ -1,3 +1,3 @@
-export 'views/login_view.dart';
-export 'bindings/auth_binding.dart';
-export 'controllers/auth_controller.dart';
+export 'login_view.dart';
+export 'auth_binding.dart';
+export 'auth_controller.dart';

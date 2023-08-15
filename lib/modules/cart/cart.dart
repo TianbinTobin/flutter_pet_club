@@ -1,3 +1,3 @@
-export 'views/cart_view.dart';
-export 'bindings/cart_binding.dart';
-export 'controllers/cart_controller.dart';
+export 'cart_view.dart';
+export 'cart_binding.dart';
+export 'cart_controller.dart';
