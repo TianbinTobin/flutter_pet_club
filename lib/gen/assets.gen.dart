@@ -65,27 +65,48 @@ class $AssetsImagesIconsGen {
 class $AssetsImagesIconsNavGen {
   const $AssetsImagesIconsNavGen();
 
-  /// File path: assets/images/icons/nav/discover.svg
-  SvgGenImage get discover =>
-      const SvgGenImage('assets/images/icons/nav/discover.svg');
-
-  /// File path: assets/images/icons/nav/explore.svg
-  SvgGenImage get explore =>
-      const SvgGenImage('assets/images/icons/nav/explore.svg');
+  /// File path: assets/images/icons/nav/home-active.svg
+  SvgGenImage get homeActive =>
+      const SvgGenImage('assets/images/icons/nav/home-active.svg');
 
   /// File path: assets/images/icons/nav/home.svg
   SvgGenImage get home => const SvgGenImage('assets/images/icons/nav/home.svg');
 
-  /// File path: assets/images/icons/nav/manage.svg
-  SvgGenImage get manage =>
-      const SvgGenImage('assets/images/icons/nav/manage.svg');
+  /// File path: assets/images/icons/nav/message-active.svg
+  SvgGenImage get messageActive =>
+      const SvgGenImage('assets/images/icons/nav/message-active.svg');
+
+  /// File path: assets/images/icons/nav/message.svg
+  SvgGenImage get message =>
+      const SvgGenImage('assets/images/icons/nav/message.svg');
+
+  /// File path: assets/images/icons/nav/profile-active.svg
+  SvgGenImage get profileActive =>
+      const SvgGenImage('assets/images/icons/nav/profile-active.svg');
 
   /// File path: assets/images/icons/nav/profile.svg
   SvgGenImage get profile =>
       const SvgGenImage('assets/images/icons/nav/profile.svg');
 
+  /// File path: assets/images/icons/nav/study-active.svg
+  SvgGenImage get studyActive =>
+      const SvgGenImage('assets/images/icons/nav/study-active.svg');
+
+  /// File path: assets/images/icons/nav/study.svg
+  SvgGenImage get study =>
+      const SvgGenImage('assets/images/icons/nav/study.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [discover, explore, home, manage, profile];
+  List<SvgGenImage> get values => [
+        homeActive,
+        home,
+        messageActive,
+        message,
+        profileActive,
+        profile,
+        studyActive,
+        study
+      ];
 }
 
 class Assets {

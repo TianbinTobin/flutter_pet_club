@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:pet_club/routes/routes.dart';
 import 'package:pet_club/gen/assets.gen.dart';
 import 'package:pet_club/common/constants/colors.dart';
 import 'package:pet_club/modules/cart/cart_controller.dart';
-import 'package:pet_club/routes/routes.dart';
 
 class CartView extends GetView<CartController> {
   const CartView({super.key});
@@ -31,28 +31,32 @@ class CartView extends GetView<CartController> {
         backgroundColor: ColorConstants.primary,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 2,
+        currentIndex: 0,
         backgroundColor: ColorConstants.primary,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            backgroundColor: Color(0xFF327030),
+            activeIcon: Assets.images.icons.nav.homeActive.svg(),
+            icon: Assets.images.icons.nav.home.svg(),
+            label: '首页',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Assets.images.icons.nav.studyActive.svg(),
+            icon: Assets.images.icons.nav.study.svg(),
+            label: '学习',
+          ),
+          BottomNavigationBarItem(
+            activeIcon: Assets.images.icons.nav.messageActive.svg(),
             icon: Badge(
               label: Text('11'),
-              child: Icon(Icons.home_outlined),
+              isLabelVisible: false,
+              child: Assets.images.icons.nav.message.svg(),
             ),
-            label: 'HOME',
+            label: '消息',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore_outlined),
-            label: 'EXPLORE',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.manage_accounts_rounded),
-            label: 'MANAGE',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_2_rounded),
-            label: 'PROFILE',
+            activeIcon: Assets.images.icons.nav.profileActive.svg(),
+            icon: Assets.images.icons.nav.profile.svg(),
+            label: '我的',
           ),
         ],
       ),
