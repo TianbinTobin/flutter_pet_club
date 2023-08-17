@@ -42,6 +42,8 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   # 启动页
   flutter_native_splash: ^2.3.2
+  # 屏幕适配
+  flutter_screenutil: ^5.8.4
   # 日志
   logger: ^2.0.1
   # 存储
@@ -106,9 +108,16 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: FredokaOne
+    - family: Avenir
       fonts:
-        - asset: assets/fonts/FredokaOne-Regular.ttf
+        - asset: assets/fonts/Avenir-Book.ttf
+          weight: 400 # normal
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 600
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

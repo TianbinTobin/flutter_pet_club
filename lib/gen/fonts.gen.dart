@@ -10,6 +10,9 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: FredokaOne
-  static const String fredokaOne = 'FredokaOne';
+  /// Font family: Avenir
+  static const String avenir = 'Avenir';
+
+  /// Font family: Montserrat
+  static const String montserrat = 'Montserrat';
 }

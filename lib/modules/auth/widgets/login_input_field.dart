@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_club/common/constants/colors.dart';
+import 'package:pet_club/common/values/colors.dart';
 
 class LoginInputField extends StatelessWidget {
   final TextEditingController controller;

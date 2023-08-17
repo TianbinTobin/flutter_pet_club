@@ -3,25 +3,30 @@ import 'package:get/get.dart';
 import 'package:pet_club/routes/routes.dart';
 
 class SplashController extends GetxController {
-  final countDown = 3.obs;
+  final seconds = 3.obs;
+  late final Timer timer;
 
   @override
   void onReady() async {
     super.onReady();
-    await _initFunction();
-    await Get.offNamed(AppRoutes.LOGIN);
+    waitingToLogin();
   }
 
-  Future<void> _initFunction() async {
-    final t = Timer.periodic(
-      Duration(seconds: 1),
+  void waitingToLogin() {
+    timer = Timer.periodic(
+      const Duration(seconds: 1),
       (t) {
-        countDown.value--;
-      } ,
+        seconds.value--;
+        if (seconds.value <= 0) {
+          t.cancel();
+          Get.offNamed(AppRoutes.LOGIN);
+        }
+      },
     );
-    //simulate some long running operation
-    await Future.delayed(Duration(seconds: 3));
-    //cancel the timer once we are done
-    t.cancel();
+  }
+
+  void skipToLogin() {
+    timer.cancel();
+    Get.offNamed(AppRoutes.LOGIN);
   }
 }

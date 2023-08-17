@@ -33,8 +33,17 @@ class $AssetsImagesCommonGen {
   AssetGenImage get loadingText =>
       const AssetGenImage('assets/images/common/loading-text.png');
 
+  /// File path: assets/images/common/splash-background.png
+  AssetGenImage get splashBackground =>
+      const AssetGenImage('assets/images/common/splash-background.png');
+
+  /// File path: assets/images/common/splash-logo.png
+  AssetGenImage get splashLogo =>
+      const AssetGenImage('assets/images/common/splash-logo.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [appLogo, loadingLogo, loadingText];
+  List<AssetGenImage> get values =>
+      [appLogo, loadingLogo, loadingText, splashBackground, splashLogo];
 }
 
 class $AssetsImagesIconsGen {

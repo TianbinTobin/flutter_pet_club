@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_club/routes/routes.dart';
 import 'package:pet_club/gen/assets.gen.dart';
-import 'package:pet_club/common/constants/colors.dart';
+import 'package:pet_club/common/values/colors.dart';
 import 'package:pet_club/modules/cart/cart_controller.dart';
 
 class CartView extends GetView<CartController> {

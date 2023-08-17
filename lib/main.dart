@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'package:pet_club/utils/logger.dart';
 import 'package:pet_club/gen/fonts.gen.dart';
 import 'package:pet_club/routes/routes.dart';
-import 'package:pet_club/common/constants/colors.dart';
+import 'package:pet_club/common/values/colors.dart';
 import 'package:pet_club/common/services/services.dart';
 
 void main() async {
@@ -28,28 +29,38 @@ class PetClubApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     logger.d('build GetMaterialApp');
-    return GetMaterialApp(
-      enableLog: true,
-      getPages: AppPages.routes,
-      initialRoute: AppPages.INITIAL,
-      defaultTransition: Transition.fade,
-      theme: ThemeData(
-        // This is the theme of your application.
-        fontFamily: FontFamily.fredokaOne,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: ColorConstants.primary,
-          primary: ColorConstants.primary,
-        ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          type: BottomNavigationBarType.fixed,
-          selectedIconTheme: IconThemeData(size: 30.0),
-          unselectedIconTheme: IconThemeData(size: 30.0),
-          backgroundColor: ColorConstants.primary,
-          selectedItemColor: ColorConstants.white,
-          unselectedItemColor: ColorConstants.white,
-        ),
-        useMaterial3: true,
-      ),
+    return ScreenUtilInit(
+      designSize: Size(375, 812),
+      builder: (context, child) {
+        return GetMaterialApp(
+          enableLog: true,
+          getPages: AppPages.routes,
+          initialRoute: AppPages.INITIAL,
+          defaultTransition: Transition.fadeIn,
+          theme: ThemeData(
+            // This is the theme of your application.
+            fontFamily: FontFamily.avenir,
+            fontFamilyFallback: const [FontFamily.montserrat],
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: ColorConstants.primary,
+              primary: ColorConstants.primary,
+            ),
+            buttonTheme: ButtonThemeData(
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+            ),
+            bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              type: BottomNavigationBarType.fixed,
+              selectedIconTheme: IconThemeData(size: 30.0),
+              unselectedIconTheme: IconThemeData(size: 30.0),
+              backgroundColor: ColorConstants.primary,
+              selectedItemColor: ColorConstants.white,
+              unselectedItemColor: ColorConstants.white,
+            ),
+            useMaterial3: true,
+          ),
+        );
+      },
     );
   }
 }

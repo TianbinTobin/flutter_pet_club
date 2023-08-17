@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:pet_club/gen/assets.gen.dart';
-import 'package:pet_club/common/constants/colors.dart';
+import 'package:pet_club/common/values/colors.dart';
 import 'package:pet_club/modules/splash/splash_controller.dart';
 
 class SplashView extends GetView<SplashController> {
@@ -10,24 +12,42 @@ class SplashView extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 375.w,
+      height: 812.h,
       color: ColorConstants.splashBackgroundColor,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Stack(
         children: [
-          Container(
-            width: 350.0,
-            padding: EdgeInsets.only(top: 120.0),
-            child: Assets.images.common.loadingLogo.image(width: 350.0, height: 350.0),
+          Positioned.fill(
+            child: Assets.images.common.splashBackground
+                .image(fit: BoxFit.fitWidth, alignment: Alignment.bottomCenter),
           ),
-          Transform.translate(
-            offset: Offset(0, -120.0),
-            child: Container(
-              width: 350.0,
-              padding: EdgeInsets.fromLTRB(52.0, 0, 30.0, 0),
-              child: Assets.images.common.loadingText.image(width: 268.0, height: 268.0),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 50.h,
+            child: Assets.images.common.splashLogo.image(),
+          ),
+          Positioned(
+            top: 30.h,
+            right: 16.w,
+            child: ConstrainedBox(
+              constraints: BoxConstraints(minWidth: 90.w, maxHeight: 27.h),
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(color: ColorConstants.tertiary),
+                ),
+                onPressed: () {
+                  controller.skipToLogin();
+                },
+                child: Obx(
+                  () => Text(
+                    '${controller.seconds}跳过',
+                    style: TextStyle(color: ColorConstants.tertiaryText),
+                  ),
+                ),
+              ),
             ),
           ),
-          Obx(() => Text('${controller.countDown}')),
         ],
       ),
     );
