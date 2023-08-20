@@ -7,6 +7,8 @@ class AuthController extends GetxController {
   final loginEmailController = TextEditingController();
   final loginPasswordController = TextEditingController();
 
+  final isAgreed = false.obs;
+
   @override
   void onInit() {
     // TODO: implement onInit
@@ -26,5 +28,9 @@ class AuthController extends GetxController {
     // TODO: implement onClose
     logger.d('AuthController onClose');
     super.onClose();
+  }
+
+  void changeIsAgreed(bool flag) {
+    isAgreed.value = flag;
   }
 }

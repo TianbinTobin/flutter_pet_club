@@ -30,10 +30,10 @@ class ColorConstants {
   static const Color secondaryText = Color(0xFF888A9C);
 
   /// 第三个色
-  static const Color tertiary = Color(0xFFDBDCC2);
+  static const Color tertiary = Color(0xFFBDBCC2);
 
   /// 第三个文本色
-  static const Color tertiaryText = Color(0xFFDBDCC2);
+  static const Color tertiaryText = Color(0xFFBDBCC2);
 
   /// 启动页背景色
   static const Color splashBackgroundColor = Color(0xFFF9F9F9);

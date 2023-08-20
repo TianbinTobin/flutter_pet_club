@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:pet_club/common/values/radius.dart';
 
 class LoginFilledButton extends StatelessWidget {
   final String? text;
   final Widget? icon;
-  final double fontSize;
+  final Color? color;
+  final double? fontSize;
+  final Color? backgroundColor;
   final void Function() onPressed;
 
   const LoginFilledButton({
@@ -11,7 +16,9 @@ class LoginFilledButton extends StatelessWidget {
     required this.onPressed,
     this.text,
     this.icon,
-    this.fontSize = 25.0
+    this.color,
+    this.fontSize = 16.0,
+    this.backgroundColor,
   });
 
   @override
@@ -35,15 +42,20 @@ class LoginFilledButton extends StatelessWidget {
   Widget buildText(BuildContext context) {
     return Text(
       '$text',
-      style: TextStyle(fontSize: fontSize),
+      style: TextStyle(
+        color: color,
+        fontSize: ScreenUtil().setSp(fontSize!),
+        fontWeight: FontWeight.w600,
+      ),
     );
   }
 
   ButtonStyle buildButtonStyle(BuildContext context) {
     return FilledButton.styleFrom(
-      minimumSize: Size(318.0, 45.0),
+      fixedSize: Size(315.w, 48.h),
+      backgroundColor: backgroundColor,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: RadiusConstants.k10pxRadius,
       ),
     );
   }

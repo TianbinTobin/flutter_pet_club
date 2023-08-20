@@ -25,10 +25,6 @@ class $AssetsImagesCommonGen {
   AssetGenImage get appLogo =>
       const AssetGenImage('assets/images/common/app-logo.png');
 
-  /// File path: assets/images/common/loading-logo.png
-  AssetGenImage get loadingLogo =>
-      const AssetGenImage('assets/images/common/loading-logo.png');
-
   /// File path: assets/images/common/loading-text.png
   AssetGenImage get loadingText =>
       const AssetGenImage('assets/images/common/loading-text.png');
@@ -43,7 +39,7 @@ class $AssetsImagesCommonGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [appLogo, loadingLogo, loadingText, splashBackground, splashLogo];
+      [appLogo, loadingText, splashBackground, splashLogo];
 }
 
 class $AssetsImagesIconsGen {
@@ -55,6 +51,14 @@ class $AssetsImagesIconsGen {
 
   /// File path: assets/images/icons/lock.svg
   SvgGenImage get lock => const SvgGenImage('assets/images/icons/lock.svg');
+
+  /// File path: assets/images/icons/login-account.svg
+  SvgGenImage get loginAccount =>
+      const SvgGenImage('assets/images/icons/login-account.svg');
+
+  /// File path: assets/images/icons/login-qq.svg
+  SvgGenImage get loginQq =>
+      const SvgGenImage('assets/images/icons/login-qq.svg');
 
   /// File path: assets/images/icons/mail.svg
   SvgGenImage get mail => const SvgGenImage('assets/images/icons/mail.svg');
@@ -68,7 +72,8 @@ class $AssetsImagesIconsGen {
   SvgGenImage get wechat => const SvgGenImage('assets/images/icons/wechat.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [arrowLeft, lock, mail, shop, wechat];
+  List<SvgGenImage> get values =>
+      [arrowLeft, lock, loginAccount, loginQq, mail, shop, wechat];
 }
 
 class $AssetsImagesIconsNavGen {

@@ -30,20 +30,19 @@ class SplashView extends GetView<SplashController> {
           Positioned(
             top: 30.h,
             right: 16.w,
-            child: ConstrainedBox(
-              constraints: BoxConstraints(minWidth: 90.w, maxHeight: 27.h),
-              child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                  side: BorderSide(color: ColorConstants.tertiary),
-                ),
-                onPressed: () {
-                  controller.skipToLogin();
-                },
-                child: Obx(
-                  () => Text(
-                    '${controller.seconds}跳过',
-                    style: TextStyle(color: ColorConstants.tertiaryText),
-                  ),
+            child: OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                minimumSize: Size(90.w, 27.h),
+                maximumSize: Size(double.infinity, 27.h),
+                side: BorderSide(color: ColorConstants.tertiary),
+              ),
+              onPressed: () {
+                controller.skipToLogin();
+              },
+              child: Obx(
+                () => Text(
+                  '${controller.seconds}跳过',
+                  style: TextStyle(color: ColorConstants.tertiaryText),
                 ),
               ),
             ),

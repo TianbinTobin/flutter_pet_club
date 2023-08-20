@@ -42,8 +42,9 @@ class PetClubApp extends StatelessWidget {
             fontFamily: FontFamily.avenir,
             fontFamilyFallback: const [FontFamily.montserrat],
             colorScheme: ColorScheme.fromSeed(
-              seedColor: ColorConstants.primary,
               primary: ColorConstants.primary,
+              seedColor: ColorConstants.primary,
+              surfaceTint: Colors.transparent,
             ),
             buttonTheme: ButtonThemeData(
               splashColor: Colors.transparent,

@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:pet_club/modules/auth/auth.dart';
+import 'package:pet_club/modules/auth/auth_view.dart';
 import 'package:pet_club/modules/cart/cart.dart';
 import 'package:pet_club/modules/splash/splash.dart';
 
@@ -16,7 +17,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.LOGIN,
-      page: () => LoginView(),
+      page: () => AuthView(),
       binding: AuthBinding(),
     ),
     GetPage(
