@@ -14,12 +14,14 @@ class SplashView extends GetView<SplashController> {
     return Container(
       width: 375.w,
       height: 812.h,
-      color: ColorConstants.splashBackgroundColor,
+      color: Colors.white,
       child: Stack(
         children: [
           Positioned.fill(
-            child: Assets.images.common.splashBackground
-                .image(fit: BoxFit.fitWidth, alignment: Alignment.bottomCenter),
+            child: Assets.images.common.splashBackground.image(
+              fit: BoxFit.fitWidth,
+              alignment: Alignment.bottomCenter,
+            ),
           ),
           Positioned(
             left: 0,

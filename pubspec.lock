@@ -21,10 +21,10 @@ packages:
     dependency: transitive
     description:
       name: ansi
-      sha256: ce4857dd957e8e4fcf1c2f409baa5b262a717a6516085d97532621c47ff87c6e
+      sha256: a85a8d9c51fdf2387f8a1528f25a2990aded750914b67500bae76cea5f40bd65
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.2.2"
+    version: "0.3.0"
   ansi_codes:
     dependency: transitive
     description:
@@ -197,10 +197,10 @@ packages:
     dependency: "direct dev"
     description:
       name: commitlint_cli
-      sha256: "77f157b4f266d15d7b5ec90ccb2dfe78c605a8a11ab6ca0bdd861c813805b9e6"
+      sha256: f448eca6b022506dbfde7c0549a8c8138561e37623005cd60d3d69f36d3b5b5f
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.6.1"
+    version: "0.6.2"
   convert:
     dependency: transitive
     description:
@@ -294,6 +294,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_easyloading:
+    dependency: "direct main"
+    description:
+      name: flutter_easyloading
+      sha256: ba21a3c883544e582f9cc455a4a0907556714e1e9cf0eababfcb600da191d17c
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.5"
   flutter_gen_core:
     dependency: transitive
     description:
@@ -338,10 +346,18 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_screenutil
-      sha256: "1b61f8c4cbf965104b6ca7160880ff1af6755aad7fec70b58444245132453745"
+      sha256: "8cf100b8e4973dc570b6415a2090b0bfaa8756ad333db46939efc3e774ee100d"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "5.8.4"
+    version: "5.9.0"
+  flutter_spinkit:
+    dependency: transitive
+    description:
+      name: flutter_spinkit
+      sha256: b39c753e909d4796906c5696a14daf33639a76e017136c8d82bf3e620ce5bb8e
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "5.2.0"
   flutter_svg:
     dependency: "direct dev"
     description:

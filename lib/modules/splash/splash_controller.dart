@@ -1,13 +1,20 @@
 import 'dart:async';
 import 'package:get/get.dart';
 import 'package:pet_club/routes/routes.dart';
+import 'package:pet_club/common/services/services.dart';
 
 class SplashController extends GetxController {
   final seconds = 3.obs;
   late final Timer timer;
 
   @override
-  void onReady() async {
+  void onInit() {
+    super.onInit();
+    SystemService.enterSystemUIFullscreen();
+  }
+
+  @override
+  void onReady() {
     super.onReady();
     waitingToLogin();
   }
@@ -18,8 +25,7 @@ class SplashController extends GetxController {
       (t) {
         seconds.value--;
         if (seconds.value <= 0) {
-          t.cancel();
-          Get.offNamed(AppRoutes.LOGIN);
+          skipToLogin();
         }
       },
     );
@@ -28,5 +34,6 @@ class SplashController extends GetxController {
   void skipToLogin() {
     timer.cancel();
     Get.offNamed(AppRoutes.LOGIN);
+    SystemService.exitSystemUIFullscreen();
   }
 }

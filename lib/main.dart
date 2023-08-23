@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'package:pet_club/utils/logger.dart';
@@ -22,10 +23,24 @@ void main() async {
   FlutterNativeSplash.remove();
 }
 
-class PetClubApp extends StatelessWidget {
+class PetClubApp extends StatefulWidget {
   const PetClubApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<StatefulWidget> createState() => PetClubAppState();
+}
+
+class PetClubAppState extends State<PetClubApp> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     logger.d('build GetMaterialApp');
@@ -60,6 +75,7 @@ class PetClubApp extends StatelessWidget {
             ),
             useMaterial3: true,
           ),
+          builder: EasyLoading.init(),
         );
       },
     );
