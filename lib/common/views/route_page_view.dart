@@ -36,7 +36,7 @@ class RoutePageViewState extends State<RoutePageView> {
         } else {
           shouldPop = true;
           showToast('是否确认退出');
-          timer = Timer(Duration(seconds: 3), () {
+          timer = Timer(Duration(seconds: 2), () {
             shouldPop = false;
           });
         }

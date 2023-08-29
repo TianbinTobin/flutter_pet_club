@@ -7,6 +7,8 @@ class LoginFilledButton extends StatelessWidget {
   final String? text;
   final Widget? icon;
   final Color? color;
+  final double? width;
+  final double? height;
   final double? fontSize;
   final Color? backgroundColor;
   final void Function() onPressed;
@@ -17,6 +19,8 @@ class LoginFilledButton extends StatelessWidget {
     this.text,
     this.icon,
     this.color,
+    this.width = 315,
+    this.height = 48,
     this.fontSize = 16.0,
     this.backgroundColor,
   });
@@ -44,7 +48,7 @@ class LoginFilledButton extends StatelessWidget {
       '$text',
       style: TextStyle(
         color: color,
-        fontSize: ScreenUtil().setSp(fontSize!),
+        fontSize: fontSize!.sp,
         fontWeight: FontWeight.w600,
       ),
     );
@@ -52,7 +56,7 @@ class LoginFilledButton extends StatelessWidget {
 
   ButtonStyle buildButtonStyle(BuildContext context) {
     return FilledButton.styleFrom(
-      fixedSize: Size(315.w, 48.h),
+      fixedSize: Size(width!.w, height!.h),
       backgroundColor: backgroundColor,
       shape: RoundedRectangleBorder(
         borderRadius: RadiusConstants.k10pxRadius,

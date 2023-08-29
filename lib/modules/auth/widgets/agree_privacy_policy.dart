@@ -2,8 +2,8 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:pet_club/common/values/colors.dart';
-import 'package:pet_club/common/values/radius.dart';
+import 'package:pet_club/common/values/values.dart';
+import 'package:pet_club/modules/auth/widgets/dialog_privacy_policy.dart';
 
 class AgreePrivacyPolicy extends StatefulWidget {
   const AgreePrivacyPolicy({super.key, this.onChange});
@@ -47,34 +47,7 @@ class AgreePrivacyPolicyState extends State<AgreePrivacyPolicy> {
         ),
         GestureDetector(
           onTap: () {
-            Get.dialog(Dialog(
-              insetPadding: EdgeInsets.zero,
-              shape: RoundedRectangleBorder(
-                borderRadius: RadiusConstants.k16pxRadius,
-              ),
-              child: SizedBox(
-                width: 315.w,
-                child: Padding(
-                  padding: EdgeInsets.all(20).r,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Align(
-                        child: Text(
-                          '使用协议与隐私政策',
-                          style: TextStyle(
-                            color: ColorConstants.primaryText,
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ));
+            Get.dialog(const DialogPrivacyPolicy());
           },
           child: const Text(
             '《用户服务协议》',
