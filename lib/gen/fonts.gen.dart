@@ -10,9 +10,6 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: Avenir
-  static const String avenir = 'Avenir';
-
-  /// Font family: Montserrat
-  static const String montserrat = 'Montserrat';
+  /// Font family: NotoSans
+  static const String notoSans = 'NotoSans';
 }
