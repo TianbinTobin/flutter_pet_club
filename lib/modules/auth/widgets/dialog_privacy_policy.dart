@@ -1,17 +1,25 @@
-import 'dart:ui';
+import 'dart:io';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'package:pet_club/utils/logger.dart';
 import 'package:pet_club/common/values/values.dart';
 import 'package:pet_club/common/widgets/widgets.dart';
 import 'package:pet_club/modules/auth/widgets/login_filled_button.dart';
-import 'package:pet_club/utils/logger.dart';
 
 class DialogPrivacyPolicy extends StatelessWidget {
   const DialogPrivacyPolicy({super.key});
+
+  void _quitApplication() {
+    if (Platform.isAndroid) {
+      SystemNavigator.pop();
+    } else {
+      exit(0);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +35,7 @@ class DialogPrivacyPolicy extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
+            children: <Widget>[
               Center(
                 child: Text(
                   '使用协议与隐私政策',
@@ -57,7 +65,7 @@ class DialogPrivacyPolicy extends StatelessWidget {
                     color: ColorConstants.primaryText,
                     fontSize: 14.sp,
                   ),
-                  children: [
+                  children: <InlineSpan>[
                     TextSpan(text: '为了更好地保障您的个人权益，请认真阅读'),
                     TextSpan(
                       text: '《用户协议》',
@@ -103,8 +111,7 @@ class DialogPrivacyPolicy extends StatelessWidget {
               GestureDetector(
                 onTap: () async {
                   logger.d('暂不同意，退出使用');
-                  ServicesBinding.instance
-                      .exitApplication(AppExitType.required);
+                  _quitApplication();
                 },
                 child: Text(
                   '暂不同意，退出使用',

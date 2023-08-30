@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,25 +31,14 @@ class PetClubApp extends StatefulWidget {
 }
 
 class PetClubAppState extends State<PetClubApp> {
-  late final AppLifecycleListener _listener;
-
   @override
   void initState() {
     super.initState();
-    _listener = AppLifecycleListener(
-      onExitRequested: _handleExitRequest,
-    );
   }
 
   @override
   void dispose() {
-    _listener.dispose();
     super.dispose();
-  }
-
-  Future<AppExitResponse> _handleExitRequest() async {
-    logger.d('请求退出');
-    return AppExitResponse.exit;
   }
 
   @override
