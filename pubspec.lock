@@ -21,18 +21,10 @@ packages:
     dependency: transitive
     description:
       name: ansi
-      sha256: "4e2ae4db76d5ce46b843f11a35891e5adb3122b1664376d0dab732cf2854fdcb"
+      sha256: e00832db409e04ff4214ee7953f1239e7c2b9573f390a5329e4139d32f6f591a
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.3.2"
-  ansi_codes:
-    dependency: transitive
-    description:
-      name: ansi_codes
-      sha256: "48aec9524e26ef234b0376b6bcf92edd9b89ad9c8994ddc7c3b52729af553bed"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.1.1"
+    version: "0.4.0"
   archive:
     dependency: transitive
     description:
@@ -197,10 +189,10 @@ packages:
     dependency: "direct dev"
     description:
       name: commitlint_cli
-      sha256: f448eca6b022506dbfde7c0549a8c8138561e37623005cd60d3d69f36d3b5b5f
+      sha256: "65b555a17cdeb05f13b555faf9babe3a65dfa9955348a3a577ea7c28aa3568bb"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.6.2"
+    version: "0.6.3"
   convert:
     dependency: transitive
     description:
@@ -484,10 +476,10 @@ packages:
     dependency: "direct main"
     description:
       name: logger
-      sha256: "66cb048220ca51cf9011da69fa581e4ee2bed4be6e82870d9e9baae75739da49"
+      sha256: ba3bc83117b2b49bdd723c0ea7848e8285a0fbc597ba09203b20d329d020c24a
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.1"
+    version: "2.0.2"
   logging:
     dependency: transitive
     description:

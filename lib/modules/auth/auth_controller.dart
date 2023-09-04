@@ -11,21 +11,18 @@ class AuthController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     logger.d('AuthController onInit');
   }
 
   @override
   void onReady() {
-    // TODO: implement onReady
     super.onReady();
     logger.d('AuthController onReady');
   }
 
   @override
   void onClose() {
-    // TODO: implement onClose
     logger.d('AuthController onClose');
     super.onClose();
   }
