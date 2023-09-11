@@ -54,7 +54,7 @@ class PetClubAppState extends State<PetClubApp> {
           defaultTransition: Transition.fadeIn,
           theme: ThemeData(
             // This is the theme of your application.
-            fontFamily: FontFamily.notoSans,
+            fontFamily: FontFamily.robotoMono,
             colorScheme: ColorScheme.fromSeed(
               primary: ColorConstants.primary,
               seedColor: ColorConstants.primary,
