@@ -189,10 +189,10 @@ packages:
     dependency: "direct dev"
     description:
       name: commitlint_cli
-      sha256: "65b555a17cdeb05f13b555faf9babe3a65dfa9955348a3a577ea7c28aa3568bb"
+      sha256: f92a6528d868d65bfb17e11f2f44282de949d5eda59877934458e07b0c5da8c3
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.6.3"
+    version: "0.7.0"
   convert:
     dependency: transitive
     description:
@@ -380,10 +380,10 @@ packages:
     dependency: "direct main"
     description:
       name: get
-      sha256: "2ba20a47c8f1f233bed775ba2dd0d3ac97b4cf32fc17731b3dfc672b06b0e92a"
+      sha256: e4e7335ede17452b391ed3b2ede016545706c01a02292a6c97619705e7d2a85e
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "4.6.5"
+    version: "4.6.6"
   glob:
     dependency: transitive
     description:
@@ -887,4 +887,4 @@ packages:
     version: "3.1.2"
 sdks:
   dart: ">=3.1.0-185.0.dev <4.0.0"
-  flutter: ">=3.10.0"
+  flutter: ">=3.13.0"
