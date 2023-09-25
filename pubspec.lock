@@ -245,10 +245,10 @@ packages:
     dependency: "direct main"
     description:
       name: dio
-      sha256: ce75a1b40947fea0a0e16ce73337122a86762e38b982e1ccb909daa3b9bc4197
+      sha256: "417e2a6f9d83ab396ec38ff4ea5da6c254da71e4db765ad737a42af6930140b7"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "5.3.2"
+    version: "5.3.3"
   fake_async:
     dependency: transitive
     description:
@@ -298,18 +298,18 @@ packages:
     dependency: transitive
     description:
       name: flutter_gen_core
-      sha256: e8637dd6a59860f89e5e71be0a27101ec32dad1a0ed7fd879fd23b6e91d5004d
+      sha256: "8b4ff1d45d125e576e26ea99d15e0419bb3c45b53696e022880866b78bb6b830"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "5.3.1"
+    version: "5.3.2"
   flutter_gen_runner:
     dependency: "direct dev"
     description:
       name: flutter_gen_runner
-      sha256: "7de1bf4fc0439be0fef3178b6423d5c7f1f9f3a38a7c6fafe75d7f70ff4856d7"
+      sha256: fd197f8c657e79313d53d3934de602ebe604ba722a84c88ae3a43cd90428c67a
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "5.3.1"
+    version: "5.3.2"
   flutter_launcher_icons:
     dependency: "direct main"
     description:
@@ -476,10 +476,10 @@ packages:
     dependency: "direct main"
     description:
       name: logger
-      sha256: ba3bc83117b2b49bdd723c0ea7848e8285a0fbc597ba09203b20d329d020c24a
+      sha256: "6bbb9d6f7056729537a4309bda2e74e18e5d9f14302489cc1e93f33b3fe32cac"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.2"
+    version: "2.0.2+1"
   logging:
     dependency: transitive
     description:
