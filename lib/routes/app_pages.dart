@@ -1,29 +1,23 @@
-import 'package:get/get.dart';
-import 'package:pet_club/modules/auth/auth.dart';
-import 'package:pet_club/modules/auth/auth_view.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pet_club/modules/cart/cart.dart';
-import 'package:pet_club/modules/splash/splash.dart';
+import 'package:pet_club/modules/auth/auth_view.dart';
+import 'package:pet_club/pages/splash/splash_page.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
-  static const INITIAL = AppRoutes.SPLASH;
-
-  static final routes = [
-    GetPage(
-      name: AppRoutes.SPLASH,
-      page: () => SplashView(),
-      binding: SplashBinding(),
+  static final routes = GoRouter(initialLocation: AppRoutes.SPLASH, routes: [
+    GoRoute(
+      path: AppRoutes.SPLASH,
+      builder: (context, state) => SplashPage(),
     ),
-    GetPage(
-      name: AppRoutes.LOGIN,
-      page: () => AuthView(),
-      binding: AuthBinding(),
+    GoRoute(
+      path: AppRoutes.LOGIN,
+      builder: (context, state) => AuthView(),
     ),
-    GetPage(
-      name: AppRoutes.CART,
-      page: () => CartView(),
-      binding: CartBinding(),
+    GoRoute(
+      path: AppRoutes.CART,
+      builder: (context, state) => CartView(),
     ),
-  ];
+  ]);
 }

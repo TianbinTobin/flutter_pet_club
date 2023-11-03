@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+part of 'services.dart';
 
 class SystemService {
   /// 设置系统UI展示样式(全面屏)
-  static Future<void> enterSystemUIFullscreen() async {
+  Future<void> enterSystemUIFullScreen() async {
     await SystemChrome.setEnabledSystemUIMode(
       SystemUiMode.manual,
       overlays: [],
@@ -11,12 +10,12 @@ class SystemService {
   }
 
   /// 设置系统UI展示样式(全面屏)
-  static Future<void> exitSystemUIFullscreen() async {
+  Future<void> exitSystemUIFullScreen() async {
     await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   }
 
   /// 设置系统UI展示样式(全面屏)
-  static Future<void> setSystemUIStyle() async {
+  Future<void> setSystemUIStyle() async {
     await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle.dark.copyWith(

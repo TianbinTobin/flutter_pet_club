@@ -1,12 +1,13 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:pet_club/utils/logger.dart';
+import 'package:logger/logger.dart';
 import 'package:pet_club/gen/assets.gen.dart';
 import 'package:pet_club/routes/app_pages.dart';
 import 'package:pet_club/common/values/colors.dart';
+import 'package:pet_club/common/services/services.dart';
+import 'package:pet_club/modules/auth/auth_controller.dart';
 import 'package:pet_club/modules/auth/widgets/login_input_field.dart';
 import 'package:pet_club/modules/auth/widgets/login_filled_button.dart';
-import 'package:pet_club/modules/auth/auth_controller.dart';
 
 class LoginView extends GetView<AuthController> {
   const LoginView({super.key});
@@ -77,7 +78,9 @@ class LoginView extends GetView<AuthController> {
                   fontSize: 20.0,
                   icon: Assets.images.icons.wechat.svg(width: 24, height: 24),
                   onPressed: () {
-                    logger.d(controller.loginPasswordController.text);
+                    services
+                        .get<Logger>()
+                        .d(controller.loginPasswordController.text);
                   },
                 ),
               ],

@@ -10,7 +10,7 @@ class SplashController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    SystemService.enterSystemUIFullscreen();
+    services.get<SystemService>().enterSystemUIFullScreen();
   }
 
   @override
@@ -34,6 +34,6 @@ class SplashController extends GetxController {
   void skipToLogin() {
     timer.cancel();
     Get.offNamed(AppRoutes.LOGIN);
-    SystemService.exitSystemUIFullscreen();
+    services.get<SystemService>().exitSystemUIFullScreen();
   }
 }

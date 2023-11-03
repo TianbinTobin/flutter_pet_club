@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:flutter/material.dart';
-import 'package:pet_club/utils/logger.dart';
+import 'package:pet_club/common/services/services.dart';
 
 class AuthController extends GetxController {
   final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
@@ -12,18 +13,18 @@ class AuthController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    logger.d('AuthController onInit');
+    services.get<Logger>().d('AuthController onInit');
   }
 
   @override
   void onReady() {
     super.onReady();
-    logger.d('AuthController onReady');
+    services.get<Logger>().d('AuthController onReady');
   }
 
   @override
   void onClose() {
-    logger.d('AuthController onClose');
+    services.get<Logger>().d('AuthController onClose');
     super.onClose();
   }
 

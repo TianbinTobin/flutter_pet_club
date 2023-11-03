@@ -1,10 +1,9 @@
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:logger/logger.dart';
 
-import 'package:pet_club/utils/logger.dart';
 import 'package:pet_club/gen/fonts.gen.dart';
 import 'package:pet_club/routes/routes.dart';
 import 'package:pet_club/common/values/colors.dart';
@@ -14,9 +13,9 @@ void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  await SystemService.setSystemUIStyle();
+  await setupServices();
 
-  await Get.putAsync<StorageService>(() => StorageService().init());
+  await services.get<SystemService>().setSystemUIStyle();
 
   runApp(const PetClubApp());
 
@@ -43,17 +42,15 @@ class PetClubAppState extends State<PetClubApp> {
 
   @override
   Widget build(BuildContext context) {
-    logger.d('build GetMaterialApp');
+    services.get<Logger>().d('build MaterialApp');
     return ScreenUtilInit(
       designSize: Size(375, 812),
       builder: (context, child) {
-        return GetMaterialApp(
-          enableLog: true,
-          getPages: AppPages.routes,
-          initialRoute: AppPages.INITIAL,
-          defaultTransition: Transition.fadeIn,
+        return MaterialApp.router(
+          routerConfig: AppPages.routes,
           theme: ThemeData(
             // This is the theme of your application.
+            useMaterial3: true,
             fontFamily: FontFamily.robotoMono,
             colorScheme: ColorScheme.fromSeed(
               primary: ColorConstants.primary,
@@ -72,7 +69,6 @@ class PetClubAppState extends State<PetClubApp> {
               selectedItemColor: ColorConstants.white,
               unselectedItemColor: ColorConstants.white,
             ),
-            useMaterial3: true,
           ),
           builder: EasyLoading.init(),
         );

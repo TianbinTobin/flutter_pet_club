@@ -1,61 +1,54 @@
-import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+part of 'services.dart';
 
-class StorageService extends GetxService {
-  static StorageService get to => Get.find();
-
-  late final SharedPreferences _sharedPreferences;
-
-  Future<StorageService> init() async {
-    _sharedPreferences = await SharedPreferences.getInstance();
-    return this;
-  }
+class StorageService {
+  final Future<SharedPreferences> _sharedPreferences =
+      SharedPreferences.getInstance();
 
   Future<bool> setInt(String key, int value) async {
-    return await _sharedPreferences.setInt(key, value);
+    return _sharedPreferences.then((pref) => pref.setInt(key, value));
   }
 
   Future<bool> setBool(String key, bool value) async {
-    return await _sharedPreferences.setBool(key, value);
+    return _sharedPreferences.then((pref) => pref.setBool(key, value));
   }
 
   Future<bool> setDouble(String key, double value) async {
-    return await _sharedPreferences.setDouble(key, value);
+    return _sharedPreferences.then((pref) => pref.setDouble(key, value));
   }
 
   Future<bool> setString(String key, String value) async {
-    return await _sharedPreferences.setString(key, value);
+    return _sharedPreferences.then((pref) => pref.setString(key, value));
   }
 
   Future<bool> setStringList(String key, List<String> value) async {
-    return await _sharedPreferences.setStringList(key, value);
+    return _sharedPreferences.then((pref) => pref.setStringList(key, value));
   }
 
-  int getInt(String key) {
-    return _sharedPreferences.getInt(key) ?? 0;
+  Future<int> getInt(String key) {
+    return _sharedPreferences.then((pref) => pref.getInt(key) ?? 0);
   }
 
-  bool getBool(String key) {
-    return _sharedPreferences.getBool(key) ?? false;
+  Future<bool> getBool(String key) {
+    return _sharedPreferences.then((pref) => pref.getBool(key) ?? false);
   }
 
-  double getDouble(String key) {
-    return _sharedPreferences.getDouble(key) ?? 0;
+  Future<double> getDouble(String key) {
+    return _sharedPreferences.then((pref) => pref.getDouble(key) ?? 0);
   }
 
-  String getString(String key) {
-    return _sharedPreferences.getString(key) ?? '';
+  Future<String> getString(String key) {
+    return _sharedPreferences.then((pref) => pref.getString(key) ?? '');
   }
 
-  List<String> getStringList(String key) {
-    return _sharedPreferences.getStringList(key) ?? [];
+  Future<List<String>> getStringList(String key) {
+    return _sharedPreferences.then((pref) => pref.getStringList(key) ?? []);
   }
 
   Future<bool> remove(String key) async {
-    return await _sharedPreferences.remove(key);
+    return _sharedPreferences.then((pref) => pref.remove(key));
   }
 
   Future<bool> clear() async {
-    return await _sharedPreferences.clear();
+    return _sharedPreferences.then((pref) => pref.clear());
   }
 }

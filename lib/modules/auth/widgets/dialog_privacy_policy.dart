@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:pet_club/utils/logger.dart';
 import 'package:pet_club/common/values/values.dart';
 import 'package:pet_club/common/widgets/widgets.dart';
 import 'package:pet_club/modules/auth/widgets/login_filled_button.dart';
@@ -110,7 +109,6 @@ class DialogPrivacyPolicy extends StatelessWidget {
               SizedBox(height: 10.h),
               GestureDetector(
                 onTap: () async {
-                  logger.d('暂不同意，退出使用');
                   _quitApplication();
                 },
                 child: Text(
