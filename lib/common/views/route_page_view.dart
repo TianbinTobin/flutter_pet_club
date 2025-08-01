@@ -26,13 +26,12 @@ class RoutePageViewState extends State<RoutePageView> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        if (Navigator.canPop(context)) {
-          return true;
-        }
+    return PopScope(
+      canPop: false, // 禁止直接返回
+      onPopInvokedWithResult: (bool didPop, dynamic result) async {
+        if (didPop) return; // 如果已经返回，则不再处理
         if (shouldPop) {
-          return true;
+          Navigator.of(context).pop(); // 真正退出
         } else {
           shouldPop = true;
           showToast('是否确认退出');
@@ -40,7 +39,6 @@ class RoutePageViewState extends State<RoutePageView> {
             shouldPop = false;
           });
         }
-        return false;
       },
       child: widget.child,
     );

@@ -37,15 +37,15 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   # 网络库
-  dio: ^5.8.0+1
+  dio: ^5.9.0
   # 数据比较
   equatable: ^2.0.7
   # GetX
   get: ^4.7.2
   # 服务定位
-  get_it: ^8.0.3
+  get_it: ^8.2.0
   # 路由管理
-  go_router: ^16.0.0
+  go_router: ^16.1.0
   # 状态管理
   flutter_bloc: ^9.1.1
   #loading + toast
